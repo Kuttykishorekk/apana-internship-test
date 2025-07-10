@@ -1,0 +1,22 @@
+[
+  {
+    "prompt": "Quel est le rendement annuel moyen d'un livret A en France ?",
+    "reference_answer": "Le rendement annuel moyen d'un livret A est d'environ 3 % en 2024."
+  },
+  {
+    "prompt": "Quelle est la différence entre un crédit à taux fixe et un crédit à taux variable ?",
+    "reference_answer": "Un crédit à taux fixe garde le même taux pendant toute la durée du prêt, tandis qu'un crédit à taux variable peut évoluer selon les conditions du marché."
+  },
+  {
+    "prompt": "À quoi sert une assurance-vie en France ?",
+    "reference_answer": "Une assurance-vie permet d'épargner sur le long terme avec des avantages fiscaux, et de transmettre un capital en cas de décès."
+  },
+  {
+    "prompt": "Comment calcule-t-on un taux d'endettement ?",
+    "reference_answer": "Le taux d'endettement se calcule en divisant les charges mensuelles par les revenus mensuels, puis en multipliant par 100."
+  },
+  {
+    "prompt": "Qu'est-ce qu'un PER ?",
+    "reference_answer": "Le PER (Plan d'Épargne Retraite) est un produit d'épargne permettant de préparer la retraite avec des avantages fiscaux."
+  }
+]
