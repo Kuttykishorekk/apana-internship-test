@@ -84,7 +84,7 @@ def evaluate_single_example(prompt: str, reference: str, index: int, total: int)
     rouge_scores = rouge_score_all(reference, generated)
     metrics.update(rouge_scores)
     
-    print(f"✅ Completed evaluation for example {index+1}")
+    print(f" Completed evaluation for example {index+1}")
     return metrics
 
 def log_to_langsmith(dataset, prompt: str, reference: str, metrics: dict):
@@ -117,16 +117,16 @@ def log_to_langsmith(dataset, prompt: str, reference: str, metrics: dict):
 
 def main():
     """Main evaluation pipeline."""
-    print("🚀 Starting Apana LLM Evaluation System")
+    print(" Starting Apana LLM Evaluation System")
     print("="*50)
     
     # Load dataset
     df = load_dataset("data/eval_set.json")
     if df.empty:
-        print("❌ No data loaded. Exiting.")
+        print(" No data loaded. Exiting.")
         return
     
-    print(f"📊 Loaded {len(df)} examples for evaluation")
+    print(f" Loaded {len(df)} examples for evaluation")
     
     # Setup LangSmith dataset
     dataset_name = f"apana_llm_eval_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
@@ -145,7 +145,7 @@ def main():
         if metrics is None:
             continue
         
-        # Add to results
+        
         result_row = {
             'prompt': prompt,
             'reference_answer': reference,
@@ -153,14 +153,14 @@ def main():
         }
         results.append(result_row)
         
-        # Log to LangSmith
+
         log_to_langsmith(dataset, prompt, reference, metrics)
     
     # Create results DataFrame
     results_df = pd.DataFrame(results)
     
     if results_df.empty:
-        print("❌ No successful evaluations. Exiting.")
+        print(" No successful evaluations. Exiting.")
         return
     
     # Save results
@@ -169,12 +169,12 @@ def main():
     output_file = f"output/results_{timestamp}.csv"
     results_df.to_csv(output_file, index=False, encoding="utf-8")
     
-    print(f"\n💾 Results saved to: {output_file}")
+    print(f"\n Results saved to: {output_file}")
     
-    # Print summary
+
     print_summary(results_df)
     
-    print("\n🎉 Evaluation completed successfully!")
+    print("\n Evaluation completed successfully!")
 
 if __name__ == "__main__":
     main()
