@@ -1,4 +1,3 @@
-```markdown
 # 📄 Apana LLM Evaluation System
 
 ## 🎯 Project Overview
