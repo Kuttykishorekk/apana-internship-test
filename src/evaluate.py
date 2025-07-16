@@ -16,7 +16,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.schema import HumanMessage
 
 # Initialize models
-embed_model = SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2")  # I have researched on Quora, This Model is Better for French
+embed_model = SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2")  # I have researched on Quora, This Model Better for French
 
 llm_judge = ChatGoogleGenerativeAI(
     model="models/gemini-1.5-flash",
@@ -131,6 +131,77 @@ def rouge_score_all(reference: str, generated: str) -> dict:
         print(f"[ERROR] ROUGE calculation failed: {e}")
         return {"rouge1": 0.0, "rouge2": 0.0, "rougeL": 0.0}
 
+@traceable(name="LLM Hallucination Detection with Reason")
+def hallucination_flag(prompt: str, reference: str, generated: str) -> dict:
+    """
+    Detect hallucinations and provide rationale.
+    Returns dict: {"flag": YES/NO, "reason": text}
+    """
+    scoring_prompt = f"""
+Tu es un expert en détection d'hallucinations dans les réponses d'IA.
+Analyse si la réponse générée contient des informations incorrectes ou inventées par rapport à la réponse de référence.
+
+Question :
+"{prompt}"
+
+Réponse de référence :
+"{reference}"
+
+Réponse à analyser :
+"{generated}"
+
+Si la réponse contient des hallucinations, réponds par :
+"YES - [raison]"
+
+Si elle est correcte, réponds par :
+"NO - [raison]"
+
+Exemples de raison : "Taux incorrect", "Omission d'informations importantes", "Pas d'erreur détectée"
+"""
+    try:
+        result = llm_judge.invoke([HumanMessage(content=scoring_prompt)]).content.strip()
+        if result.upper().startswith("YES"):
+            return {"flag": "YES", "reason": result}
+        elif result.upper().startswith("NO"):
+            return {"flag": "NO", "reason": result}
+        else:
+            return {"flag": "UNKNOWN", "reason": result}
+    except Exception as e:
+        print(f"[ERROR] Hallucination detection failed: {e}")
+        return {"flag": "ERROR", "reason": str(e)}
+
+def llm_self_confidence(prompt: str, generated: str) -> int:
+    """
+    LLM self-assesses confidence (0-100).
+    """
+    scoring_prompt = f"""
+Sur une échelle de 0 à 100, indique ta confiance que la réponse est correcte et complète.
+
+Question :
+"{prompt}"
+
+Réponse :
+"{generated}"
+
+Donne uniquement un nombre entier.
+"""
+    try:
+        result = llm_judge.invoke([HumanMessage(content=scoring_prompt)]).content.strip()
+        match = re.search(r'(\d+)', result)
+        if match:
+            return int(match.group(1))
+        return 0
+    except Exception as e:
+        print(f"[ERROR] Self-confidence estimation failed: {e}")
+        return 0
+
+def check_regulatory_mentions(text: str) -> bool:
+    """
+    Check if text mentions key regulatory terms.
+    """
+    keywords = ["code monétaire", "AMF", "ACPR", "loi PACTE"]
+    return any(k in text.lower() for k in keywords)
+
 def print_summary(df: pd.DataFrame):
     """Print evaluation summary statistics."""
     print("\n" + "="*50)
@@ -150,3 +221,10 @@ def print_summary(df: pd.DataFrame):
     print(f"📈 Avg ROUGE-2:               {df['rouge2'].mean():.4f}")
     print(f"📈 Avg ROUGE-L:               {df['rougeL'].mean():.4f}")
     
+    halluc_count = df[df['hallucination_flag'] == 'YES'].shape[0]
+    print(f"⚠️  Hallucinations detected:  {halluc_count}/{len(df)} ({halluc_count/len(df)*100:.1f}%)")
+    
+    compliance_count = df[df['regulatory_compliance'] == True].shape[0]
+    print(f"✅ Regulatory mentions present in {compliance_count}/{len(df)} responses.")
+    
+    print("="*50)
