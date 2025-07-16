@@ -17,6 +17,8 @@ from src.evaluate import (
     bleu_score,
     rouge_score_all,
     hallucination_flag,
+    llm_self_confidence,
+    check_regulatory_mentions,
     print_summary
 )
 from src.generate import generate_response
@@ -35,19 +37,17 @@ def create_or_get_dataset(dataset_name: str):
         return None
     
     try:
-        # Try to get existing dataset first
         datasets = client.list_datasets()
         for dataset in datasets:
             if dataset.name == dataset_name:
-                print(f"✅ Using existing dataset: {dataset_name}")
+                print(f" Using existing dataset: {dataset_name}")
                 return dataset
         
-        # Create new dataset if doesn't exist
         dataset = client.create_dataset(
             dataset_name=dataset_name,
             description=f"Apana LLM Evaluation Dataset - Created {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
         )
-        print(f"✅ Created new dataset: {dataset_name}")
+        print(f" Created new dataset: {dataset_name}")
         return dataset
     except Exception as e:
         print(f"[ERROR] Dataset creation/retrieval failed: {e}")
@@ -61,17 +61,23 @@ def evaluate_single_example(prompt: str, reference: str, index: int, total: int)
     generated = generate_response(prompt)
     
     if generated.startswith("[ERROR]"):
-        print(f"❌ Generation failed for example {index+1}")
+        print(f" Generation failed for example {index+1}")
         return None
     
-    # Calculate all metrics
+    # Compute hallucination flag and reason
+    halluc = hallucination_flag(prompt, reference, generated)
+    
+    # Compute all metrics
     metrics = {
         'generated_answer': generated,
         'similarity_score': evaluate_response(reference, generated),
         'keyword_overlap_score': keyword_overlap_score(reference, generated),
         'llm_judge_score': llm_judge_score(prompt, reference, generated),
         'bleu_score': bleu_score(reference, generated),
-        'hallucination': hallucination_flag(prompt, reference, generated)
+        'self_confidence': llm_self_confidence(prompt, generated),
+        'regulatory_compliance': check_regulatory_mentions(generated),
+        'hallucination_flag': halluc['flag'],
+        'hallucination_reason': halluc['reason']
     }
     
     # Add ROUGE scores
@@ -100,7 +106,10 @@ def log_to_langsmith(dataset, prompt: str, reference: str, metrics: dict):
                 "rouge1": metrics['rouge1'],
                 "rouge2": metrics['rouge2'],
                 "rougeL": metrics['rougeL'],
-                "hallucination": metrics['hallucination']
+                "self_confidence": metrics['self_confidence'],
+                "regulatory_compliance": metrics['regulatory_compliance'],
+                "hallucination_flag": metrics['hallucination_flag'],
+                "hallucination_reason": metrics['hallucination_reason']
             }
         )
     except Exception as e:
