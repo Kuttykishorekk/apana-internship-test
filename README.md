@@ -88,35 +88,6 @@ python run_eval.py
 * CSV export to `/output`.
 * Optional LangSmith logging for advanced review.
 
-**5. 🌐 LangSmith Integration**
-
-If enabled in `.env`, all examples are logged to LangSmith:
-
-- Interactive inspection
-- Metadata filtering
-- Custom scoring columns
-
-Example fields logged:
-
-- Prompt
-- Generated Answer
-- All metrics
-- Hallucination rationale
-
-## 🌐 LangSmith Dashboard
-
-An interactive LangSmith dataset with all evaluation examples and metadata is available here:
-
-👉 **[View Interactive LangSmith Dashboard](https://smith.langchain.com/public/a81a6166-fd8a-4ae3-8dce-ac33d388df97/d)**
-
-This dashboard allows stakeholders to:
-
-- Inspect prompts and generated answers
-- Explore all metrics per example
-- Filter by hallucination flag, regulatory compliance, self-confidence, and more
-- Sort and export results
-
-
 ---
 
 ## 📊 Evaluation Summary
