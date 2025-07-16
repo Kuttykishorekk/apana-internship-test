@@ -20,12 +20,12 @@ It includes:
 
 llm-eval-apana/
 ├── data/
-│   └── eval\_set.json          # Evaluation dataset
+│   └── eval_set.json          # Evaluation dataset
 ├── src/
 │   ├── generate.py            # Response generation logic
 │   └── evaluate.py            # Metrics computation
 ├── output/                    # Evaluation results CSVs
-├── run\_eval.py                # Main evaluation runner
+├── run_eval.py                # Main evaluation runner
 ├── requirements.txt           # Dependencies
 ├── .env.template              # Environment variable template
 └── README.md                  # This file
