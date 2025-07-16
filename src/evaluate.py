@@ -212,19 +212,19 @@ def print_summary(df: pd.DataFrame):
         print("No data to summarize.")
         return
     
-    print(f"📊 Dataset size: {len(df)} examples")
-    print(f"📈 Avg Cosine Similarity:     {df['similarity_score'].mean():.4f}")
-    print(f"📈 Avg Keyword Overlap:       {df['keyword_overlap_score'].mean():.4f}")
-    print(f"📈 Avg LLM-Judge Score:       {df['llm_judge_score'].mean():.2f}/10")
-    print(f"📈 Avg BLEU:                  {df['bleu_score'].mean():.4f}")
-    print(f"📈 Avg ROUGE-1:               {df['rouge1'].mean():.4f}")
-    print(f"📈 Avg ROUGE-2:               {df['rouge2'].mean():.4f}")
-    print(f"📈 Avg ROUGE-L:               {df['rougeL'].mean():.4f}")
+    print(f" Dataset size: {len(df)} examples")
+    print(f" Avg Cosine Similarity:     {df['similarity_score'].mean():.4f}")
+    print(f" Avg Keyword Overlap:       {df['keyword_overlap_score'].mean():.4f}")
+    print(f" Avg LLM-Judge Score:       {df['llm_judge_score'].mean():.2f}/10")
+    print(f" Avg BLEU:                  {df['bleu_score'].mean():.4f}")
+    print(f" Avg ROUGE-1:               {df['rouge1'].mean():.4f}")
+    print(f" Avg ROUGE-2:               {df['rouge2'].mean():.4f}")
+    print(f" Avg ROUGE-L:               {df['rougeL'].mean():.4f}")
     
     halluc_count = df[df['hallucination_flag'] == 'YES'].shape[0]
-    print(f"⚠️  Hallucinations detected:  {halluc_count}/{len(df)} ({halluc_count/len(df)*100:.1f}%)")
+    print(f" Hallucinations detected:  {halluc_count}/{len(df)} ({halluc_count/len(df)*100:.1f}%)")
     
     compliance_count = df[df['regulatory_compliance'] == True].shape[0]
-    print(f"✅ Regulatory mentions present in {compliance_count}/{len(df)} responses.")
+    print(f" Regulatory mentions present in {compliance_count}/{len(df)} responses.")
     
     print("="*50)
