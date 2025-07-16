@@ -148,6 +148,8 @@ Example fields logged:
 * All metrics
 * Hallucination rationale
 
+👉 **[View Interactive LangSmith Dashboard](./Charts/langsmithchart.png)
+
 ---
 
 ## ✨ Notes & Next Steps
