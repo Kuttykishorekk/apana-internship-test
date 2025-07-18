@@ -228,3 +228,4 @@ def print_summary(df: pd.DataFrame):
     print(f" Regulatory mentions present in {compliance_count}/{len(df)} responses.")
     
     print("="*50)
+    
