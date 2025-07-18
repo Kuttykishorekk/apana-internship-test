@@ -1,0 +1,76 @@
+prompt,reference_answer,generated_answer,similarity_score,keyword_overlap_score,llm_judge_score,bleu_score,self_confidence,regulatory_compliance,hallucination_flag,hallucination_reason,rouge1,rouge2,rougeL
+Quel est le rendement annuel moyen d'un livret A en France ?,Le rendement annuel moyen d'un livret A est d'environ 3 % en 2024.,"Le rendement du Livret A est fixé par le gouvernement et révisé deux fois par an, en janvier et en juillet.  Il n'y a donc pas de ""rendement annuel moyen"" sur une longue période, car il fluctue.  Pour connaître le rendement actuel, il faut consulter le site officiel de l'institution qui gère le Livret A (généralement la Banque de France ou le site du Ministère de l'Économie et des Finances).  Toute information sur un rendement moyen passé ne serait valable que pour la période spécifiée et ne saurait prédire le rendement futur.",0.4133,0.8182,6.0,0.0121,95,False,YES,"YES - La réponse affirme qu'il n'y a pas de ""rendement annuel moyen"" sur une longue période car il fluctue.  C'est partiellement vrai, le taux change, mais il est tout à fait possible de calculer un rendement annuel moyen sur une période donnée.  La réponse est donc une hallucination car elle nie la possibilité d'une donnée objectivement calculable (la moyenne).  Elle introduit une imprécision qui empêche de répondre à la question.  De plus,  affirmer que le rendement est révisé deux fois par an est une simplification excessive, même si c'est souvent le cas.  La réponse se concentre sur la difficulté de donner une réponse précise plutôt que de répondre à la question posée.",0.15,0.0847,0.1
+Quelle est la différence entre un crédit à taux fixe et un crédit à taux variable ?,"Un crédit à taux fixe garde le même taux pendant toute la durée du prêt, tandis qu'un crédit à taux variable peut évoluer selon les conditions du marché.","La différence principale entre un crédit à taux fixe et un crédit à taux variable réside dans l'évolution du taux d'intérêt appliqué au capital emprunté.
+
+* **Crédit à taux fixe:** Le taux d'intérêt est fixé pour toute la durée du prêt.  L'emprunteur connaît précisément le montant de ses mensualités dès le départ, ce qui offre une grande sécurité et une meilleure prévisibilité budgétaire.  En revanche, si les taux baissent par la suite, il ne peut en profiter.
+
+* **Crédit à taux variable:** Le taux d'intérêt est révisé périodiquement (généralement chaque année ou chaque trimestre) en fonction d'un indice de référence (souvent l'Euribor 3 mois ou un autre indice bancaire).  Les mensualités peuvent donc augmenter ou diminuer en fonction de l'évolution de cet indice.  Cela offre une potentialité de mensualités plus faibles si les taux baissent, mais expose à un risque d'augmentation significative des mensualités si les taux augmentent.  La prévisibilité budgétaire est donc moindre.
+
+
+Il est important de noter que pour les crédits immobiliers,  la plupart des banques proposent des options de modulation ou de plafonnement des variations de taux pour limiter le risque lié à un crédit à taux variable.  Cependant, ces options impactent généralement le coût total du crédit.  Le choix entre un crédit à taux fixe et un crédit à taux variable dépend fortement des anticipations sur l'évolution des taux d'intérêt et de la tolérance au risque de l'emprunteur.",0.8249,0.6087,9.0,0.0314,95,False,NO,"NO - La réponse est complète, précise et ne contient aucune information incorrecte ou inventée.  Elle développe correctement la différence entre un crédit à taux fixe et un crédit à taux variable, en incluant des informations pertinentes sur la prévisibilité budgétaire et les risques associés à chaque type de crédit.  L'ajout de la mention des options de modulation ou de plafonnement pour les crédits immobiliers est une information juste et utile.",0.141,0.0903,0.1282
+À quoi sert une assurance-vie en France ?,"Une assurance-vie permet d'épargner sur le long terme avec des avantages fiscaux, et de transmettre un capital en cas de décès.","En France, une assurance-vie sert principalement à **épargner et transmettre un capital**.  Elle combine un aspect épargne avec un aspect assurance décès.
+
+**Aspect épargne:**  L'assurance-vie permet de placer son argent sur différents supports, plus ou moins risqués (fonds en euros, unités de compte),  pour générer des revenus (intérêts, plus-values).  Le capital est disponible à tout moment,  sous réserve de potentielles pénalités de retrait avant un certain délai.
+
+**Aspect assurance décès:** En cas de décès de l'assuré, le capital est versé aux bénéficiaires désignés dans le contrat.  Ce versement est généralement exonéré de droits de succession dans certaines limites (dépendant du montant et de la date de souscription).  Ceci constitue un avantage majeur par rapport à d'autres placements.
+
+**En résumé, l'assurance-vie offre une combinaison de:**
+
+* **Performance financière:**  Potentiel de croissance du capital selon les supports choisis.
+* **Sécurité du capital:**  Une partie du capital est généralement sécurisée (fonds en euros).
+* **Transmission du patrimoine:**  Facilité de transmission du capital aux héritiers avec des avantages fiscaux.
+* **Flexibilité:**  Possibilité de rachats partiels ou totaux, et de modifier les supports d'investissement.
+
+
+Il est important de noter que les performances passées ne garantissent pas les performances futures et que tout investissement comporte un risque.  Le choix des supports et la gestion du contrat doivent être adaptés à la situation personnelle et aux objectifs de chacun.",0.7776,0.9091,9.0,0.0118,95,False,NO,"NO - La réponse est une explication complète et précise du fonctionnement d'une assurance-vie en France.  Elle mentionne correctement les aspects épargne et assurance décès, les différents supports d'investissement, les avantages fiscaux (tout en précisant les limites), la flexibilité du contrat et les risques inhérents à l'investissement.  Elle ne contient aucune information inventée ou incorrecte.",0.1625,0.0996,0.0989
+Comment calcule-t-on un taux d'endettement ?,"Le taux d'endettement se calcule en divisant les charges mensuelles par les revenus mensuels, puis en multipliant par 100.","Le calcul du taux d'endettement dépend de la perspective adoptée : celle de l'entreprise ou celle d'un particulier.
+
+**Pour une entreprise:**  Il existe plusieurs méthodes, mais la plus courante est le ratio d'endettement global.  Il se calcule ainsi :
+
+**(Total des dettes / Total des actifs) * 100**
+
+* **Total des dettes:**  Englobe toutes les dettes de l'entreprise, à court et long terme (emprunts bancaires, dettes fournisseurs, etc.).
+* **Total des actifs:** Représente l'ensemble des biens et droits possédés par l'entreprise (immobilisations, stocks, créances, trésorerie...).
+
+Ce ratio exprime le pourcentage des actifs financés par l'endettement.  Plus le ratio est élevé, plus l'entreprise est endettée.  Il n'y a pas de seuil universel, son interprétation dépend du secteur d'activité et de la stratégie de l'entreprise.
+
+**Pour un particulier:** Le calcul est plus simple et se concentre sur le rapport entre les charges de remboursement de crédits et les revenus.  Plusieurs indicateurs existent :
+
+* **Taux d'endettement brut:**  **(Charges de remboursement de crédits / Revenus nets mensuels) * 100**
+
+  Ce ratio inclut toutes les charges de remboursement (crédit immobilier, crédit consommation, etc.).  Un taux supérieur à 33% est généralement considéré comme un signe d'endettement important, mais cela dépend des organismes prêteurs et de la situation personnelle.
+
+* **Taux d'endettement net:**  **(Charges de remboursement de crédits - revenus locatifs nets) / Revenus nets mensuels) * 100**
+
+  Ce ratio est plus précis car il prend en compte les revenus locatifs qui peuvent alléger les charges de remboursement.
+
+**Points importants:**
+
+* Les données utilisées doivent être cohérentes (période de référence identique pour les revenus et les charges).
+* Il est crucial de consulter un conseiller financier pour une analyse personnalisée et une interprétation contextuelle de son taux d'endettement.  Les seuils mentionnés sont des repères, pas des règles absolues.
+* La réglementation française n'impose pas de taux d'endettement maximal pour les particuliers, mais les banques appliquent leurs propres critères d'octroi de crédit.
+
+
+En conclusion, le calcul du taux d'endettement est simple mais son interprétation nécessite une analyse approfondie et un contexte précis.",0.5678,0.75,9.0,0.0051,95,False,NO,"NO - La réponse fournit une explication complète et précise du calcul du taux d'endettement, en distinguant correctement le calcul pour les entreprises (ratio d'endettement global) et les particuliers (taux d'endettement brut et net).  Elle inclut des détails importants comme la prise en compte des revenus locatifs pour le calcul net, l'importance de la cohérence des données et le rôle du contexte dans l'interprétation des résultats.  Elle mentionne également la différence entre les seuils utilisés par les banques et l'absence de seuil légal en France pour les particuliers.  La seule différence avec la réponse de référence est qu'elle est beaucoup plus complète et précise, ce qui n'est pas une hallucination mais une amélioration.",0.085,0.0251,0.065
+Qu'est-ce qu'un PER ?,Le PER (Plan d'Épargne Retraite) est un produit d'épargne permettant de préparer la retraite avec des avantages fiscaux.,"Le Plan d'Épargne Retraite (PER) est un produit d'épargne retraite français, créé par la loi Pacte de 2019, qui remplace les anciens dispositifs d'épargne retraite (PERP, Madelin, contrat d'assurance vie avec option retraite).  Il se décline en trois supports :
+
+* **PER individuel:**  Souscrit par un particulier pour constituer sa propre épargne retraite.  Il offre une grande flexibilité en termes de versements (réguliers ou libres) et de choix d'investissement (supports en unités de compte ou fonds euros).  Il est possible de récupérer son épargne avant la retraite, mais avec des pénalités.
+
+* **PER collectif:**  Proposé par l'employeur à ses salariés.  Il permet de bénéficier de versements patronaux et d'avantages fiscaux.  Les modalités de gestion et d'investissement sont définies par l'entreprise.
+
+* **PER obligatoire:**  Destiné aux fonctionnaires et agents publics.  Il est géré par un régime de retraite spécifique.
+
+
+**Points importants concernant tous les types de PER:**
+
+* **Fiscalité:** Les versements sont déductibles des revenus imposables dans certaines limites (plafonds annuels). Les plus-values sont exonérées d'impôt à la sortie, sous conditions.  Les prélèvements sociaux s'appliquent à la sortie.
+
+* **Accessibilité:**  Accessible à tous les actifs, quel que soit leur régime de retraite.
+
+* **Gestion:**  Le choix de la gestion (gérée ou libre) dépend du type de PER et des options proposées par l'établissement financier.
+
+* **Retrait:**  Le retrait est possible à la retraite, mais aussi avant en cas de situations spécifiques (invalidité, décès, achat de la résidence principale...).  Des pénalités peuvent s'appliquer en cas de retrait anticipé.
+
+* **Transférabilité:**  Il est possible de transférer son PER d'un établissement à un autre.
+
+Il est crucial de se renseigner auprès d'un conseiller financier pour choisir le PER le plus adapté à sa situation personnelle et à ses objectifs de retraite.  Les informations fournies ici sont de nature générale et ne constituent pas un conseil financier.",0.867,0.8824,9.0,0.0106,95,False,NO,"NO - La réponse est globalement correcte et fournit une description précise et détaillée du PER, incluant ses différents types (individuel, collectif, obligatoire), ses aspects fiscaux, son accessibilité, sa gestion, les possibilités de retrait et de transfert.  Elle inclut également une mise en garde importante concernant la nécessité d'un conseil financier personnalisé.  Il n'y a pas d'informations inventées ou incorrectes.",0.1056,0.067,0.0944
