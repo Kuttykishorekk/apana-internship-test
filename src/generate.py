@@ -2,7 +2,6 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.schema import HumanMessage
 
 def generate_response(prompt: str) -> str:
@@ -10,6 +9,9 @@ def generate_response(prompt: str) -> str:
     Generate a response using Gemini model from LangChain.
     """
     try:
+        # ✅ move import inside to allow monkeypatching in tests
+        from langchain_google_genai import ChatGoogleGenerativeAI
+
         llm = ChatGoogleGenerativeAI(
             model="models/gemini-1.5-flash",
             temperature=0.3,

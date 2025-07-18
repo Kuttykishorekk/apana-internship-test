@@ -1,0 +1,91 @@
+prompt,reference_answer,generated_answer,similarity_score,keyword_overlap_score,llm_judge_score,bleu_score,self_confidence,regulatory_compliance,hallucination_flag,hallucination_reason,rouge1,rouge2,rougeL
+Quel est le rendement annuel moyen d'un livret A en France ?,Le rendement annuel moyen d'un livret A est d'environ 3 % en 2024.,"Le rendement du Livret A n'est pas fixe et change deux fois par an, en février et en août.  Il est donc impossible de donner un rendement annuel *moyen* précis sans connaître la période de référence.  Pour connaître le rendement actuel, il faut consulter le site de l'institution qui gère le Livret A (généralement la Banque de France ou le site de votre banque).",0.3527,0.8182,7.0,0.0162,95,False,YES,"YES - La réponse affirme que le rendement annuel moyen est impossible à calculer sans connaître la période de référence, ce qui est partiellement vrai, mais elle omet de fournir une information pertinente et contextuelle.  La question demandait un rendement *moyen* annuel,  et la réponse de référence fournit une estimation.  La réponse analysée évite de donner une réponse numérique, même approximative, et se réfugie derrière la variabilité du taux.  Elle hallucine en ne fournissant pas une réponse qui répond à l'esprit de la question, même si elle est techniquement correcte sur le fait que le taux change.  Elle aurait pu fournir une estimation ou préciser que le taux est variable mais qu'une moyenne annuelle peut être calculée et qu'elle se situe autour d'une certaine valeur (en précisant la source).",0.1978,0.0899,0.1319
+Quelle est la différence entre un crédit à taux fixe et un crédit à taux variable ?,"Un crédit à taux fixe garde le même taux pendant toute la durée du prêt, tandis qu'un crédit à taux variable peut évoluer selon les conditions du marché.","La principale différence entre un crédit à taux fixe et un crédit à taux variable réside dans le **taux d'intérêt appliqué sur le capital emprunté**.
+
+* **Crédit à taux fixe:** Le taux d'intérêt est fixé pour toute la durée du prêt.  Vous savez donc exactement combien vous allez payer chaque mois pendant toute la durée du remboursement.  Il n'y a pas de surprise, votre mensualité reste constante.  Cependant, si les taux d'intérêt baissent pendant la durée du prêt, vous ne pourrez pas en profiter.
+
+* **Crédit à taux variable:** Le taux d'intérêt est révisé périodiquement (par exemple, tous les trimestres ou tous les ans) en fonction d'un indice de référence (comme l'Euribor).  Vos mensualités peuvent donc augmenter ou diminuer en fonction de l'évolution de cet indice.  Vous bénéficiez d'une baisse des taux si l'indice diminue, mais vous risquez une augmentation de vos mensualités si l'indice augmente.  Le risque est donc plus important qu'avec un taux fixe.
+
+
+Voici un tableau récapitulatif :
+
+| Caractéristique | Crédit à taux fixe | Crédit à taux variable |
+|---|---|---|
+| **Taux d'intérêt** | Fixé pour toute la durée du prêt | Variable, révisé périodiquement |
+| **Mensualités** | Constantes | Variables |
+| **Risque** | Faible | Élevé |
+| **Prévisibilité** | Forte | Faible |
+| **Avantages** | Sécurité, prévisibilité budgétaire | Possibilité de mensualités plus faibles si les taux baissent |
+| **Inconvénients** |  Peut être moins avantageux si les taux baissent fortement | Risque d'augmentation des mensualités, imprévisibilité budgétaire |
+
+
+Le choix entre un crédit à taux fixe et un crédit à taux variable dépend de votre profil d'emprunteur, de votre aversion au risque et de vos prévisions sur l'évolution des taux d'intérêt.  Il est conseillé de comparer les offres et de se faire accompagner par un conseiller financier pour faire le meilleur choix.",0.8378,0.6957,9.0,0.0313,95,False,NO,"NO - La réponse est complète, précise et ne contient aucune information incorrecte ou inventée.  Elle explique clairement la différence entre un crédit à taux fixe et un crédit à taux variable, en utilisant un tableau récapitulatif pour une meilleure compréhension.  Elle mentionne également l'importance de comparer les offres et de se faire conseiller.",0.1315,0.0826,0.126
+À quoi sert une assurance-vie en France ?,"Une assurance-vie permet d'épargner sur le long terme avec des avantages fiscaux, et de transmettre un capital en cas de décès.","En France, une assurance-vie sert principalement à **épargner et à se constituer un capital**, tout en bénéficiant d'un cadre fiscal avantageux (sous certaines conditions).  Ses utilisations sont multiples :
+
+* **Constitution d'un capital pour la retraite:** C'est l'une des utilisations les plus courantes.  L'assurance-vie permet de préparer sa retraite en complément des régimes de retraite obligatoires.
+
+* **Transmission de patrimoine:**  L'assurance-vie offre des avantages fiscaux intéressants en matière de transmission du patrimoine aux héritiers.  Le capital est transmis hors succession, sous certaines conditions, ce qui peut limiter les droits de succession.
+
+* **Préparation d'événements importants:**  Elle peut servir à financer des projets importants comme l'achat d'une maison, les études des enfants, ou tout autre projet de vie.
+
+* **Protection de la famille:** En cas de décès de l'assuré, le capital est versé aux bénéficiaires désignés, constituant ainsi une sécurité financière pour la famille.
+
+* **Placement financier:**  L'assurance-vie permet d'investir son argent sur différents supports, allant des fonds euros (plus sécurisés) aux unités de compte (plus risqués, mais potentiellement plus rentables).  Le choix des supports dépend du profil de risque de l'épargnant.
+
+
+Il est important de noter que les avantages fiscaux de l'assurance-vie sont soumis à des conditions et peuvent évoluer.  Il est donc conseillé de se renseigner auprès d'un conseiller financier pour bien comprendre les mécanismes et choisir le contrat le plus adapté à sa situation.",0.766,0.8182,9.0,0.0062,95,False,NO,"NO - La réponse est une explication complète et précise de l'utilité d'une assurance-vie en France.  Elle détaille correctement les différents usages (épargne retraite, transmission de patrimoine, financement de projets, protection familiale, placement financier) et mentionne explicitement la dépendance des avantages fiscaux à des conditions spécifiques et l'importance de se renseigner auprès d'un conseiller.  Il n'y a pas d'informations inventées ou incorrectes.",0.1469,0.0845,0.1049
+Comment calcule-t-on un taux d'endettement ?,"Le taux d'endettement se calcule en divisant les charges mensuelles par les revenus mensuels, puis en multipliant par 100.","Le taux d'endettement se calcule en divisant la somme des dettes par le total des ressources.  Il existe plusieurs façons de calculer ce taux, selon les informations disponibles et l'objectif de l'analyse. Voici les formules les plus courantes :
+
+**1. Taux d'endettement global (pour les entreprises) :**
+
+* **Formule :** (Total des dettes / Total des actifs) x 100
+* **Total des dettes :**  Comprend toutes les dettes à court terme (crédits fournisseurs, dettes fiscales, etc.) et à long terme (emprunts bancaires, obligations, etc.).
+* **Total des actifs :**  Représente l'ensemble des biens et droits possédés par l'entreprise (immobilisations, stocks, créances, trésorerie, etc.).  On le trouve au bilan.
+
+Ce taux indique la proportion des actifs financés par l'endettement.  Un taux élevé signifie une forte dépendance aux emprunts.
+
+**2. Taux d'endettement net (pour les entreprises) :**
+
+* **Formule :** (Dettes - Trésorerie) / Capitaux propres x 100
+* **Dettes :**  Même définition que ci-dessus.
+* **Trésorerie :**  Liquidités disponibles.  Soustraire la trésorerie permet d'avoir une vision plus réaliste de la capacité de remboursement.
+* **Capitaux propres :**  Différence entre l'actif et le passif (ce qui appartient réellement à l'entreprise).
+
+Ce taux est plus précis que le taux d'endettement global car il prend en compte la trésorerie disponible pour rembourser les dettes.
+
+**3. Taux d'endettement pour les particuliers (endettement personnel) :**
+
+Il n'existe pas une seule formule standardisée, mais on utilise souvent un ratio basé sur le revenu :
+
+* **Formule :** (Somme des mensualités de crédits / Revenu net mensuel) x 100
+* **Somme des mensualités de crédits :**  Total des mensualités de tous les crédits (crédit immobilier, crédit à la consommation, etc.).
+* **Revenu net mensuel :**  Revenu après impôts et charges.
+
+Ce taux indique la part du revenu consacrée au remboursement des dettes.  Un taux élevé signifie une forte dépendance à l'endettement et un risque de surendettement.
+
+
+**Points importants :**
+
+* **Source des données :**  Les données nécessaires au calcul proviennent généralement du bilan comptable pour les entreprises et du relevé de compte bancaire et des contrats de crédit pour les particuliers.
+* **Interprétation :**  L'interprétation du taux d'endettement dépend du secteur d'activité (certaines industries sont plus endettées que d'autres), de la taille de l'entreprise ou de la situation financière personnelle.  Il n'y a pas de seuil universel, mais un taux élevé est généralement considéré comme un facteur de risque.
+* **Comparaison :**  Il est important de comparer le taux d'endettement avec celui d'entreprises ou de particuliers similaires pour une analyse plus pertinente.
+
+
+En résumé, le calcul du taux d'endettement dépend du contexte (entreprise ou particulier) et de l'information disponible.  Il est crucial de bien définir les éléments utilisés dans le calcul pour obtenir un résultat significatif.",0.6632,0.6875,9.0,0.0138,95,False,NO,"NO - La réponse est complète et précise. Elle détaille correctement les différentes méthodes de calcul du taux d'endettement selon le contexte (entreprise ou particulier), fournissant des formules et des explications claires.  Elle mentionne également des points importants comme l'interprétation du résultat et la nécessité de comparer les données.  Bien qu'il existe plusieurs façons de calculer un taux d'endettement, la réponse ne présente pas d'informations incorrectes ou inventées.  La réponse de référence est une simplification, tandis que la réponse analysée est plus complète et nuancée.",0.0711,0.0278,0.0553
+Qu'est-ce qu'un PER ?,Le PER (Plan d'Épargne Retraite) est un produit d'épargne permettant de préparer la retraite avec des avantages fiscaux.,"Un PER, ou **Plan d'Épargne Retraite**, est un produit d'épargne conçu pour préparer sa retraite.  Il permet de bénéficier d'avantages fiscaux tout en constituant un capital pour compléter sa pension de retraite.  Il existe plusieurs types de PER :
+
+* **PER individuel (PERin) :**  Souscrit par une personne physique pour son propre compte.  C'est le plus courant.
+* **PER collectif (PERco) :**  Proposé par l'employeur à ses salariés.  Il peut être alimenté par l'employeur et/ou le salarié.
+
+Les avantages fiscaux varient selon le type de PER et la situation de l'épargnant.  Ils peuvent inclure :
+
+* **Une réduction d'impôt sur le revenu** pour les versements effectués.
+* **Une exonération d'impôt sur les plus-values** réalisées sur les placements.
+
+Il est important de noter que :
+
+* **L'argent versé sur un PER est bloqué jusqu'à la retraite (ou en cas de situations spécifiques prévues par la loi).**  Un retrait anticipé est possible, mais il est généralement soumis à des pénalités.
+* **Le choix des supports d'investissement est variable selon le PER.**  On peut investir dans des fonds euros, des unités de compte (actions, obligations, etc.), ou une combinaison des deux.  Le niveau de risque est donc variable.
+* **Les modalités de sortie en retraite sont également variables.**  On peut choisir de percevoir une rente viagère, un capital ou une combinaison des deux.
+
+En résumé, un PER est un outil puissant pour préparer sa retraite, mais il est crucial de bien comprendre son fonctionnement et les risques associés avant de souscrire.  Il est conseillé de se faire accompagner par un conseiller financier pour choisir le PER le plus adapté à sa situation.",0.9077,0.8824,9.0,0.0119,95,False,NO,"NO - La réponse à analyser est une explication complète et précise d'un PER, incluant les différents types (PERin et PERco), les avantages fiscaux possibles, les restrictions sur les retraits anticipés, les options d'investissement et les modalités de sortie à la retraite.  Elle ne contient aucune information incorrecte ou inventée.  Elle ajoute même des détails utiles qui enrichissent la réponse de référence.",0.1214,0.0772,0.0958

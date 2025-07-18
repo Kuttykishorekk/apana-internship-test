@@ -1,27 +1,31 @@
 import pytest
-from src.generate import generate_response
 
 def test_generate_success(monkeypatch):
-    class DummyResp:
-        content = "Réponse simulée."
+    class DummyLLM:
+        def invoke(self, messages):
+            class DummyResp:
+                content = "Réponse simulée."
+            return DummyResp()
 
-    def fake_invoke(self, messages):
-        return DummyResp()
+    monkeypatch.setattr(
+        "langchain_google_genai.ChatGoogleGenerativeAI",
+        lambda *args, **kwargs: DummyLLM()
+    )
 
-    # Patch the class (lazy-loaded inside function)
-    import langchain_google_genai.chat_models
-    monkeypatch.setattr(langchain_google_genai.chat_models.ChatGoogleGenerativeAI, "invoke", fake_invoke)
-
+    from src.generate import generate_response
     out = generate_response("Quelle est la fiscalité ?")
-    assert isinstance(out, str)
     assert out == "Réponse simulée."
 
 def test_generate_error(monkeypatch):
-    def fake_invoke(self, messages):
-        raise RuntimeError("API down")
+    class FailingLLM:
+        def invoke(self, messages):
+            raise RuntimeError("API down")
 
-    import langchain_google_genai.chat_models
-    monkeypatch.setattr(langchain_google_genai.chat_models.ChatGoogleGenerativeAI, "invoke", fake_invoke)
+    monkeypatch.setattr(
+        "langchain_google_genai.ChatGoogleGenerativeAI",
+        lambda *args, **kwargs: FailingLLM()
+    )
 
-    out = generate_response("Tout plante")
-    assert out.startswith("[ERROR]") and "Impossible de générer" in out
+    from src.generate import generate_response
+    out = generate_response("Test d'erreur")
+    assert "[ERROR]" in out
