@@ -105,6 +105,46 @@ python run_eval.py
 | **Hallucination Reason**  | Explanation of hallucination or correctness       |
 
 ---
+### ✅ Testing & Validation
+
+This project includes a test suite to validate core functionality such as:
+
+- Dataset loading and input structure
+- LLM response generation behavior (mocked)
+- Evaluation metrics: BLEU, ROUGE, cosine similarity, keyword overlap, compliance, hallucination, etc.
+
+#### 🔧 Run Tests Locally
+
+Make sure you have all dependencies installed:
+
+```bash
+pip install -r requirements.txt
+```
+
+Then run the full test suite with:
+
+```bash
+pytest -q
+```
+
+You should see:
+
+```
+............                                                                                                                 [100%]
+12 passed in X.XXs
+```
+
+#### 📂 Test Structure
+
+- `tests/test_evaluate.py` – Unit tests for metric functions and dataset handling  
+- `tests/test_generate.py` – Tests Gemini response generation logic (mocked)  
+- `tests/conftest.py` – Automatically adds `src/` to `sys.path` for import resolution
+
+#### 🧪 Test Coverage
+
+All critical logic is covered:
+- 100% test pass rate
+- Validates error-handling and edge cases (empty prompts, hallucinations, API failures)
 
 ## 🖼️ Evaluation Visuals
 
