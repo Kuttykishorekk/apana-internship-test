@@ -20,15 +20,35 @@ It includes:
 
 llm-eval-apana/
 ├── data/
-│   └── eval_set.json          # Evaluation dataset
-├── src/
-│   ├── generate.py            # Response generation logic
-│   └── evaluate.py            # Metrics computation
-├── output/                    # Evaluation results CSVs
-├── run_eval.py                # Main evaluation runner
-├── requirements.txt           # Dependencies
-├── .env.template              # Environment variable template
-└── README.md                  # This file
+│   └── eval_set.json              ← JSON dataset containing prompts and reference answers
+│
+├── src/                           ← Core logic and evaluation functions
+│   ├── generate.py                ← LLM response generation using Gemini API (lazy-loaded)
+│   └── evaluate.py                ← All scoring functions: similarity, BLEU, ROUGE, LLM judge, etc.
+│
+├── tests/
+│   ├── test_generate.py           ← Unit tests for LLM generation (mocked)
+│   └── test_evaluate.py           ← Unit tests for metrics and scoring functions
+│   └── conftest.py                ← Shared test setup: sets import path
+│
+├── output/                        ← Stores results from evaluations (e.g., CSVs, logs)
+│   └── results.csv                ← Final scored outputs (optional)
+│
+├── run_eval.py                    ← Main script that:
+│                                     1. Loads dataset
+│                                     2. Generates LLM answers
+│                                     3. Applies multiple evaluation metrics
+│                                     4. Writes results to /output and prints summary
+│
+├── requirements.txt               ← Python dependencies (LangChain, SentenceTransformers, etc.)
+│
+├── .env                           ← Your local Gemini API key (not committed)
+├── .env.template                  ← Template for `.env`, shared safely in repo
+│
+├── .gitignore                     ← Excludes .env, venv, __pycache__, etc. from commits
+│
+└── README.md                      ← Complete documentation of the system
+
 
 ````
 
