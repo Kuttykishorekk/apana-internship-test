@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from langchain.schema import HumanMessage, SystemMessage
-# Note: ChatGoogleGenerativeAI is imported inside function for testability
+# ChatGoogleGenerativeAI is imported inside function for testability
 
 def generate_response(prompt: str) -> str:
     """

@@ -203,7 +203,7 @@ def check_regulatory_mentions(text: str) -> bool:
 
 def print_summary(df: pd.DataFrame):
     print("\n" + "="*50)
-    print("🔍 EVALUATION SUMMARY")
+    print(" EVALUATION SUMMARY")
     print("="*50)
 
     if df.empty:

@@ -1,0 +1,138 @@
+prompt,reference_answer,generated_answer,similarity_score,keyword_overlap_score,llm_judge_score,bleu_score,self_confidence,regulatory_compliance,hallucination_flag,hallucination_reason,rouge1,rouge2,rougeL
+Quel est le rendement annuel moyen d'un livret A en France ?,Le rendement annuel moyen d'un livret A est d'environ 3 % en 2024.,"Le taux du Livret A est révisé deux fois par an, en janvier et en juillet.  Il n'est donc pas possible de donner un rendement annuel *moyen* précis sur une longue période, car il varie en fonction des décisions de la Banque de France.  Pour connaître le rendement d'une année spécifique, il faut se référer au taux en vigueur durant cette année.
+
+Il est important de comprendre que le rendement du Livret A est un taux brut, et qu'il n'est pas soumis à l'impôt sur le revenu ni aux prélèvements sociaux.  Cependant, il est important de noter que ce rendement est généralement inférieur à l'inflation, ce qui signifie que le pouvoir d'achat de votre épargne sur le Livret A peut diminuer au fil du temps.
+
+Pour obtenir les taux historiques du Livret A, je vous conseille de consulter le site officiel de la Banque de France ou celui du ministère de l'Économie et des Finances.  Ces sites vous fourniront les informations les plus fiables et à jour.  Je ne peux pas fournir de données historiques précises ici car elles changent régulièrement.",0.4672,0.9091,7.0,0.0063,95,False,YES,"YES - La réponse affirme qu'il est impossible de donner un rendement annuel moyen précis car le taux varie.  C'est partiellement vrai, mais la réponse de référence donne un chiffre approximatif (3% en 2024), ce qui est possible.  La réponse analysée hallucine en affirmant qu'il est *impossible* de donner une moyenne, alors que c'est simplement plus complexe et moins précis qu'une donnée ponctuelle.  Elle évite de donner une réponse approximative, alors que c'est possible et même attendu dans ce contexte.  La réponse de référence fournit une approximation raisonnable, ce que la réponse analysée refuse de faire, inventant une impossibilité.",0.0995,0.0457,0.0814
+Quelle est la différence entre un crédit à taux fixe et un crédit à taux variable ?,"Un crédit à taux fixe garde le même taux pendant toute la durée du prêt, tandis qu'un crédit à taux variable peut évoluer selon les conditions du marché.","La principale différence entre un crédit à taux fixe et un crédit à taux variable réside dans l'évolution du taux d'intérêt appliqué tout au long de la durée du prêt.
+
+**Crédit à taux fixe:**
+
+* **Taux d'intérêt constant:** Le taux d'intérêt est fixé pour toute la durée du prêt,  indiqué dans le contrat de prêt.  Les mensualités restent donc identiques pendant toute la durée du remboursement.
+* **Prévisibilité:**  Vous savez exactement combien vous devrez payer chaque mois, ce qui facilite la planification budgétaire.
+* **Protection contre la hausse des taux:** Vous êtes protégé contre une éventuelle augmentation des taux d'intérêt sur les marchés financiers.
+* **Coût potentiellement plus élevé:**  Le taux fixe est généralement légèrement supérieur au taux variable au moment de la souscription, car il intègre une marge de sécurité pour l'établissement prêteur face aux fluctuations du marché.
+
+**Crédit à taux variable:**
+
+* **Taux d'intérêt fluctuant:** Le taux d'intérêt est révisé périodiquement (par exemple, tous les 6 mois ou tous les ans) en fonction d'un indice de référence (ex: EURIBOR) auquel s'ajoute une marge fixée par la banque.  Les mensualités peuvent donc varier à chaque révision.
+* **Moins prévisible:**  Le montant des mensualités n'est pas garanti sur toute la durée du prêt, ce qui rend la planification budgétaire plus complexe.
+* **Risque de hausse des mensualités:**  Si les taux d'intérêt augmentent, vos mensualités augmenteront également, ce qui peut impacter votre budget.
+* **Coût potentiellement plus faible (à court terme):**  Le taux variable est généralement plus bas que le taux fixe au moment de la souscription.
+
+**En résumé:**
+
+| Caractéristique | Crédit à taux fixe | Crédit à taux variable |
+|---|---|---|
+| **Taux d'intérêt** | Fixe pour toute la durée du prêt | Fluctue en fonction d'un indice de référence |
+| **Mensualités** | Constantes | Variables |
+| **Prévisibilité** | Elevée | Faible |
+| **Protection contre la hausse des taux** | Oui | Non |
+| **Coût initial** | Généralement plus élevé | Généralement plus faible |
+| **Risque** | Faible | Elevé |
+
+
+**Choisir entre un crédit à taux fixe et un crédit à taux variable dépend de votre situation personnelle et de votre tolérance au risque.**  Il est crucial de bien comparer les offres et de simuler différents scénarios d'évolution des taux d'intérêt avant de prendre une décision.  N'hésitez pas à solliciter les conseils d'un conseiller financier indépendant pour vous aider à faire le meilleur choix en fonction de votre profil.  Ce conseil n'est pas exhaustif et ne se substitue pas à une analyse personnalisée de votre situation financière.",0.8553,0.6957,9.0,0.0234,95,False,NO,"NO - La réponse est complète, précise et ne contient aucune information incorrecte ou inventée.  Elle explique clairement les différences entre un crédit à taux fixe et un crédit à taux variable, en utilisant un tableau récapitulatif pour une meilleure compréhension.  Elle inclut également des conseils judicieux sur la nécessité d'une analyse personnalisée et la consultation d'un conseiller financier.",0.0936,0.0626,0.0819
+À quoi sert une assurance-vie en France ?,"Une assurance-vie permet d'épargner sur le long terme avec des avantages fiscaux, et de transmettre un capital en cas de décès.","En France, une assurance-vie est un contrat d'épargne-investissement offrant une double vocation : **épargne et transmission de patrimoine**.  Elle présente plusieurs avantages, mais il est crucial de comprendre ses mécanismes avant de souscrire.
+
+**Ses principales fonctions sont :**
+
+* **Constitution d'une épargne à long terme:**  L'assurance-vie permet de constituer un capital sur le long terme grâce à des versements réguliers ou ponctuels.  Les fonds sont investis selon le choix du souscripteur (unités de compte ou fonds en euros), offrant ainsi une possibilité de diversification et de croissance du capital.  La performance dépendra des supports choisis et des fluctuations des marchés.
+
+* **Transmission du patrimoine:**  L'assurance-vie offre des avantages fiscaux importants en matière de transmission du patrimoine.  Les sommes versées sont transmises aux bénéficiaires désignés par le souscripteur, en dehors de la succession,  bénéficiant ainsi d'un régime fiscal avantageux, notamment en matière de droits de succession.  Ce régime fiscal est cependant complexe et dépend de plusieurs facteurs (date de souscription, montant des capitaux, liens de parenté avec les bénéficiaires...).
+
+* **Protection du conjoint et des enfants:**  En cas de décès du souscripteur, le capital est versé aux bénéficiaires désignés, assurant ainsi une sécurité financière pour sa famille.
+
+* **Flexibilité:**  L'assurance-vie offre une certaine flexibilité.  Il est généralement possible de réaliser des rachats partiels ou totaux du contrat, sous certaines conditions,  permettant ainsi d'accéder à son épargne en cas de besoin.  Cependant, des frais peuvent être appliqués.
+
+**Points importants à considérer :**
+
+* **Risques liés aux supports d'investissement:**  Les unités de compte sont soumises aux fluctuations des marchés financiers, impliquant un risque de perte en capital.  Le fonds en euros, quant à lui, offre une garantie en capital, mais sa rentabilité est généralement moins importante.
+
+* **Frais de gestion:**  Les contrats d'assurance-vie sont soumis à des frais de gestion, qui peuvent varier en fonction du type de contrat et des supports choisis.  Il est important de comparer les offres et de bien comprendre les frais avant de souscrire.
+
+* **Fiscalité complexe:**  La fiscalité de l'assurance-vie est complexe et dépend de plusieurs facteurs.  Il est conseillé de se faire accompagner par un conseiller financier pour optimiser sa stratégie.
+
+
+**En conclusion:** L'assurance-vie est un outil puissant pour l'épargne et la transmission de patrimoine, mais il est essentiel de bien comprendre ses mécanismes, ses risques et ses frais avant de souscrire.  Il est fortement recommandé de se faire accompagner par un professionnel pour choisir le contrat le plus adapté à sa situation personnelle et à ses objectifs financiers.  Ce qui précède n'est qu'une information générale et ne saurait se substituer à un conseil personnalisé.",0.7565,0.9091,9.0,0.0104,95,False,NO,"NO - La réponse est une explication détaillée et précise de l'utilité d'une assurance-vie en France.  Elle couvre tous les aspects importants mentionnés dans la réponse de référence (épargne à long terme et transmission de patrimoine) et ajoute des informations pertinentes et exactes sur les mécanismes, les risques, les frais et la fiscalité,  soulignant la complexité et la nécessité d'un conseil personnalisé.  Il n'y a pas d'informations inventées ou incorrectes.",0.0913,0.0598,0.0754
+Comment calcule-t-on un taux d'endettement ?,"Le taux d'endettement se calcule en divisant les charges mensuelles par les revenus mensuels, puis en multipliant par 100.","Le calcul du taux d'endettement dépend du contexte.  Il existe plusieurs méthodes, chacune fournissant une perspective différente de la situation financière d'un individu ou d'une entreprise.  Il est crucial de préciser à quel type d'endettement on se réfère.
+
+**1. Taux d'endettement pour les particuliers:**
+
+Ce taux mesure la capacité d'un ménage à rembourser ses dettes.  Il existe plusieurs façons de le calculer, mais la plus courante est le rapport entre les charges de remboursement de crédits et les revenus disponibles.
+
+* **Méthode 1 (la plus courante):**
+
+   **(Charges de remboursement des crédits / Revenus nets mensuels) * 100**
+
+   * **Charges de remboursement des crédits:**  Somme de toutes les mensualités de prêts (crédit immobilier, prêt auto, crédit conso, etc.)
+   * **Revenus nets mensuels:**  Salaire net après impôts et charges sociales, plus les autres revenus nets réguliers (loyers, pensions, etc.).
+
+   Un taux d'endettement supérieur à 33% est généralement considéré comme élevé et peut indiquer un risque de surendettement.  Cependant, ce seuil est indicatif et dépend de nombreux facteurs (épargne, autres charges, etc.).
+
+* **Méthode 2 (plus complète):**
+
+   **(Charges de remboursement des crédits + autres charges fixes / Revenus nets mensuels) * 100**
+
+   Cette méthode intègre d'autres charges fixes importantes comme le loyer ou les charges de copropriété, offrant une vision plus globale de la capacité de remboursement.
+
+**2. Taux d'endettement pour les entreprises:**
+
+Plusieurs ratios permettent d'évaluer l'endettement d'une entreprise.  Les plus courants sont :
+
+* **Ratio d'endettement (ou gearing ratio):**
+
+   **(Dettes totales / Capitaux propres) * 100**
+
+   * **Dettes totales:**  Ensemble des dettes à court et à long terme de l'entreprise.
+   * **Capitaux propres:**  Différence entre l'actif et le passif de l'entreprise (ce que possèdent les actionnaires).
+
+   Ce ratio indique la proportion de financement de l'entreprise provenant de dettes par rapport aux capitaux propres.  Un ratio élevé suggère un fort recours à l'endettement, ce qui peut être risqué en cas de difficultés économiques.
+
+* **Ratio de couverture des charges financières:**
+
+   **(EBITDA / Charges financières) * 100**
+
+   * **EBITDA:**  Bénéfice avant intérêts, impôts, dépréciation et amortissement.
+   * **Charges financières:**  Intérêts payés sur les dettes.
+
+   Ce ratio mesure la capacité de l'entreprise à couvrir ses charges financières avec son résultat d'exploitation.  Un ratio faible indique une difficulté à rembourser les intérêts de ses dettes.
+
+**Points importants:**
+
+* **L'interprétation des résultats dépend du contexte.**  Un taux d'endettement élevé n'est pas systématiquement négatif.  Il peut être justifié par des investissements rentables.
+* **Il est crucial de consulter un conseiller financier.**  Il pourra analyser votre situation personnelle ou celle de votre entreprise de manière approfondie et vous conseiller sur la meilleure stratégie à adopter.
+* **Les données utilisées doivent être précises et à jour.**  Des erreurs dans le calcul peuvent conduire à des conclusions erronées.
+
+
+Ce document est fourni à titre informatif et ne constitue pas un conseil financier.  Il est essentiel de consulter un professionnel pour une analyse personnalisée de votre situation.",0.5872,0.6875,9.0,0.0033,95,False,NO,"NO - La réponse est plus complète et précise que la réponse de référence.  Elle précise que le calcul du taux d'endettement varie selon le contexte (particulier ou entreprise), fournit plusieurs méthodes de calcul pour chaque cas, et inclut des informations importantes sur l'interprétation des résultats et les limites de l'analyse.  La réponse de référence est une simplification excessive qui ne tient pas compte de la complexité du sujet.  La réponse analysée ne contient pas d'informations incorrectes ou inventées.",0.0583,0.0146,0.051
+Qu'est-ce qu'un PER ?,Le PER (Plan d'Épargne Retraite) est un produit d'épargne permettant de préparer la retraite avec des avantages fiscaux.,"Le PER, ou Plan d'Épargne Retraite, est un produit d'épargne retraite individuel permettant de préparer sa retraite de manière plus avantageuse qu'avec les anciens dispositifs.  Il offre plusieurs avantages fiscaux et une grande flexibilité.  Il existe trois types de PER :
+
+* **PER individuel :**  Souscrit par une personne physique pour constituer sa propre épargne retraite. C'est le plus courant.
+* **PER collectif :** Proposé par l'employeur, souvent en complément d'un régime de retraite obligatoire.  Les versements peuvent être effectués par l'employeur et/ou le salarié.
+* **PER entreprise :**  Destiné aux dirigeants de sociétés et aux travailleurs indépendants.  Il offre des avantages fiscaux spécifiques.
+
+**Fonctionnement général :**
+
+Vous alimentez votre PER avec des versements réguliers ou ponctuels.  Ces versements sont, sous certaines conditions, déductibles de vos impôts (selon le type de PER et le régime fiscal choisi).  Votre épargne est ensuite investie selon votre profil d'investisseur et votre horizon de placement (plus ou moins risqué).  À la retraite, vous percevez votre épargne sous forme de rente viagère ou de capital, ou d'une combinaison des deux.
+
+**Avantages fiscaux (variables selon le type de PER et le régime fiscal choisi) :**
+
+* **Déduction des versements des impôts sur le revenu :**  Permet de réduire le montant d'impôt dû.  Les plafonds de déduction varient.
+* **Avantages sur les plus-values :**  Les plus-values réalisées sur les placements sont exonérées d'impôt à la sortie, sous certaines conditions.
+
+**Inconvénients :**
+
+* **Blocage des fonds jusqu'à la retraite :**  L'accès à votre épargne avant la retraite est possible, mais soumis à des conditions et pénalités fiscales.
+* **Complexité des choix d'investissement :**  Il est important de bien comprendre les différents supports d'investissement proposés pour faire un choix adapté à son profil.
+* **Frais de gestion :**  Des frais de gestion sont appliqués par les organismes qui gèrent le PER.  Il est important de comparer les offres.
+
+
+**Avant de souscrire à un PER, il est crucial de :**
+
+* **Déterminer votre profil d'investisseur :**  Votre tolérance au risque influencera le choix de vos placements.
+* **Comparer les offres des différents assureurs et banques :**  Les frais de gestion et les supports d'investissement varient considérablement.
+* **Se faire accompagner par un conseiller financier :**  Un conseiller pourra vous aider à choisir le PER le plus adapté à votre situation et à vos objectifs.
+
+
+**Ce résumé ne se substitue pas à un conseil personnalisé.  Il est fortement recommandé de consulter un conseiller financier pour obtenir des informations complètes et adaptées à votre situation personnelle avant de prendre une décision d'investissement.**",0.9419,1.0,9.0,0.0104,95,False,NO,"NO - La réponse est une explication complète et précise du PER, incluant ses différents types (individuel, collectif, entreprise), son fonctionnement, ses avantages fiscaux, ses inconvénients, et des conseils importants avant souscription.  Elle ne contient pas d'informations incorrectes ou inventées.  Elle est même plus détaillée que la réponse de référence.",0.0901,0.069,0.0858
